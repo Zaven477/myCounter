@@ -7,7 +7,7 @@ export const Counter = () => {
 
   return (
     <div>
-      <p>Счётчик: {count}</p>
+      <p>Счётчик</p>
       <button onClick={() => setCount(count + 1)}>Увеличить</button>
     </div>
   );
