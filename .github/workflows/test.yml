@@ -19,3 +19,11 @@ jobs:
 
       - name: Запуск тестов
         run: npm run test:ci
+
+        deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: success()  # ← Только если тесты прошли
+    steps:
+      - name: Вызов хука Vercel
+        run: curl -X POST ${{ secrets.VERCEL_TOKEN }}
