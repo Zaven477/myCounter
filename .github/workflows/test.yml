@@ -20,7 +20,7 @@ jobs:
       - name: Запуск тестов
         run: npm run test:ci
 
-        deploy:
+  deploy:
     needs: test
     runs-on: ubuntu-latest
     if: success()  # ← Только если тесты прошли
