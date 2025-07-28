@@ -1,22 +1,13 @@
 name: Run Tests
-
 on: [push, pull_request]
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout репозитория
         uses: actions/checkout@v4
-
-      - name: Установка Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Установка зависимостей
         run: npm install
-
       - name: Запуск тестов
         run: npm run test:ci
 
