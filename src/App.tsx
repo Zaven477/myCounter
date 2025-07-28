@@ -52,7 +52,7 @@ export const AppData = () => {
   const { data, loading, error, refetch } = useQuery("data", fetchData);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading</div>;
   }
 
   if (error) {
