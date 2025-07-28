@@ -1,7 +1,7 @@
 name: Run Deploy
 on: [push, pull_request]
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout репозитория
@@ -10,24 +10,8 @@ jobs:
         run: npm install
       - name: Запуск тестов
         run: npm run test:ci
-  lint:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Checkout репозитория
-        uses: actions/checkout@v4
-      - name: Установка зависимостей
-        run: npm install
       - name: Запуск eslint
         run: npm run lint
-  build: 
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Checkout репозитория
-        uses: actions/checkout@v4
-      - name: Установка зависимостей
-        run: npm install
       - name: Запуск build
         run: npm run build
-
+  
