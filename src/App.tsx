@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { Component } from "./Component";
 
 const cache = new Map();
 
@@ -64,7 +63,6 @@ export const AppData = () => {
     <div>
       <h1>{data}</h1>
       <button onClick={refetch}>Обновить</button>
-      <Component />
     </div>
   );
 };
