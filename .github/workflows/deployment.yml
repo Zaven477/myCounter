@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Deploy
 on: [push, pull_request]
 jobs:
   test:
@@ -12,6 +12,7 @@ jobs:
         run: npm run test:ci
   lint:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Checkout репозитория
         uses: actions/checkout@v4
@@ -21,6 +22,7 @@ jobs:
         run: npm run lint
   build: 
     runs-on: ubuntu-latest
+    needs: lint
     steps:
       - name: Checkout репозитория
         uses: actions/checkout@v4
