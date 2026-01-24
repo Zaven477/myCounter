@@ -4,7 +4,7 @@ const cache = new Map();
 
 const useQuery = (
   key: string,
-  functionData: () => Promise<Record<string, string>>
+  functionData: () => Promise<Record<string, string>>,
 ) => {
   const [data, setData] = useState<string | null>(cache.get(key) || null);
   const [loading, setLoading] = useState(false);
@@ -63,8 +63,6 @@ export const AppData = () => {
     <div>
       <h1>{data}</h1>
       <button onClick={refetch}>Обновить</button>
-      <div>my</div>
-      <div>ella</div>
     </div>
   );
 };
