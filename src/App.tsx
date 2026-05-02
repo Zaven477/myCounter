@@ -66,6 +66,7 @@ export const AppData = () => {
       <div>geni</div>
       <div>my</div>
       <div>zav</div>
+      <button>el</button>
     </div>
   );
 };
