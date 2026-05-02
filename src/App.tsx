@@ -67,6 +67,7 @@ export const AppData = () => {
       <div>my</div>
       <div>zav</div>
       <button>el</button>
+      <button>Tigran</button>
     </div>
   );
 };
