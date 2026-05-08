@@ -66,6 +66,7 @@ export const AppData = () => {
       <div>ок</div>
       <div>No</div>
       <div>yes</div>
+      <div>el</div>
     </div>
   );
 };
