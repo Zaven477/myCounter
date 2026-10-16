@@ -67,6 +67,7 @@ export const AppData = () => {
       <button>ok</button>
       <span>kar</span>
       <button>Click</button>
+      <div>my</div>
     </div>
   );
 };
