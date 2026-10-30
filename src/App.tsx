@@ -63,10 +63,6 @@ export const AppData = () => {
     <div>
       <h1>{data}</h1>
       <button onClick={refetch}>Обновить</button>
-      <button>zav</button>
-      <button>tig</button>
-      <div>Ella</div>
-      <span>Hello</span>
     </div>
   );
 };
